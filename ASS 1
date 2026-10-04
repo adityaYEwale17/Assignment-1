@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "xpython",
+      "display_name": "Python 3.13 (XPython)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.13.1"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "69c5fec9-ff23-4887-b5c3-929ec7173784",
+      "cell_type": "code",
+      "source": "a = [10, 20, 30, 40, 50]\nprint(a)\n\na.append(60)\nprint(a)\n\na.insert(2, 25)\nprint(a)\n\na.remove(30)\nprint(a)\n\na.pop()\nprint(a)\n\na.sort()\nprint(a)\n\na.reverse()\nprint(a)\n\nprint(len(a))\n\nprint(a[2])\n\nprint(a[1:4])\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[10, 20, 30, 40, 50]\n[10, 20, 30, 40, 50, 60]\n[10, 20, 25, 30, 40, 50, 60]\n[10, 20, 25, 40, 50, 60]\n[10, 20, 25, 40, 50]\n[10, 20, 25, 40, 50]\n[50, 40, 25, 20, 10]\n5\n25\n[40, 25, 20]\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "40108bd0-eb7f-484f-b755-6427d78ca2ba",
+      "cell_type": "code",
+      "source": "tuple = (10, 20, 30, 40, 50)\nprint(tuple)\n\nprint(tuple[2])\n\nprint(tuple[1:4])\n\nprint(len(tuple))\n\ntuple = (10, 20, 20, 30, 20)\nprint(tuple.count(20))\n\nprint(tuple.index(30))\n\nt1 = (1, 2, 3)\nt2 = (4, 5, 6)\nprint(t1 + t2)\n\nprint(t1 * 3)\n\nprint(20 in tuple)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "(10, 20, 30, 40, 50)\n30\n(20, 30, 40)\n5\n3\n3\n(1, 2, 3, 4, 5, 6)\n(1, 2, 3, 1, 2, 3, 1, 2, 3)\nTrue\n"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "id": "520abb8a-0502-4fe2-b78a-e802df9fafbe",
+      "cell_type": "code",
+      "source": "student = {\n    \"name\": \"Aditya\",\n    \"age\": 18,\n    \"branch\": \"Computer\"\n}\n\nprint(student)\n\nstudent[\"marks\"] = 85\nprint(student)\n\nstudent[\"age\"] = 19\nprint(student)\n\ndel student[\"age\"]\nprint(student)\n\nstudent.pop(\"marks\")\nprint(student)\n\nprint(student.get(\"name\"))\n\nprint(student.keys())\n\nprint(student.values())\n\nprint(student.items())\n\nstudent.clear()\nprint(student)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "{'name': 'Aditya', 'age': 18, 'branch': 'Computer'}\n{'name': 'Aditya', 'age': 18, 'branch': 'Computer', 'marks': 85}\n{'name': 'Aditya', 'age': 19, 'branch': 'Computer', 'marks': 85}\n{'name': 'Aditya', 'branch': 'Computer', 'marks': 85}\n{'name': 'Aditya', 'branch': 'Computer'}\nAditya\ndict_keys(['name', 'branch'])\ndict_values(['Aditya', 'Computer'])\ndict_items([('name', 'Aditya'), ('branch', 'Computer')])\n{}\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "bc864cbb-b359-4d83-81a3-a603c14ed63e",
+      "cell_type": "code",
+      "source": "my_list = [10, 20, 30, 40, 50]\n\nprint(\"Original List:\", my_list)\n\nmy_list.append(60)\nprint(\"After append:\", my_list)\n\nmy_list.insert(2, 25)\nprint(\"After insert:\", my_list)\n\nmy_list.remove(30)\nprint(\"After remove:\", my_list)\n\nmy_list.sort()\nprint(\"After sort:\", my_list)\n\nmy_list.reverse()\nprint(\"After reverse:\", my_list)\n\nmy_tuple = (10, 20, 30, 20, 40)\n\nprint(\"\\nOriginal Tuple:\", my_tuple)\nprint(\"Length:\", len(my_tuple))\nprint(\"Count of 20:\", my_tuple.count(20))\nprint(\"Index of 30:\", my_tuple.index(30))\nprint(\"Slicing:\", my_tuple[1:4])\n\n\nmy_dict = {\n    \"name\": \"Aditya\",\n    \"age\": 18,\n    \"marks\": 85\n}\n\nprint(\"\\nOriginal Dictionary:\", my_dict)\n\nmy_dict[\"branch\"] = \"Computer\"\nprint(\"After adding:\", my_dict)\n\nmy_dict[\"marks\"] = 90\nprint(\"After updating:\", my_dict)\n\nprint(\"Keys:\", my_dict.keys())\nprint(\"Values:\", my_dict.values())\nprint(\"Items:\", my_dict.items())\n\nmy_dict.pop(\"age\")\nprint(\"After deletion:\", my_dict)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Original List: [10, 20, 30, 40, 50]\nAfter append: [10, 20, 30, 40, 50, 60]\nAfter insert: [10, 20, 25, 30, 40, 50, 60]\nAfter remove: [10, 20, 25, 40, 50, 60]\nAfter sort: [10, 20, 25, 40, 50, 60]\nAfter reverse: [60, 50, 40, 25, 20, 10]\n\nOriginal Tuple: (10, 20, 30, 20, 40)\nLength: 5\nCount of 20: 2\nIndex of 30: 2\nSlicing: (20, 30, 20)\n\nOriginal Dictionary: {'name': 'Aditya', 'age': 18, 'marks': 85}\nAfter adding: {'name': 'Aditya', 'age': 18, 'marks': 85, 'branch': 'Computer'}\nAfter updating: {'name': 'Aditya', 'age': 18, 'marks': 90, 'branch': 'Computer'}\nKeys: dict_keys(['name', 'age', 'marks', 'branch'])\nValues: dict_values(['Aditya', 18, 90, 'Computer'])\nItems: dict_items([('name', 'Aditya'), ('age', 18), ('marks', 90), ('branch', 'Computer')])\nAfter deletion: {'name': 'Aditya', 'marks': 90, 'branch': 'Computer'}\n"
+        }
+      ],
+      "execution_count": 5
+    },
+    {
+      "id": "75564c70-46f0-49fb-8a7a-5617a6a2169e",
+      "cell_type": "code",
+      "source": "marks = [78, 85, 92, 67, 88]\ntuple = [78, 85, 92, 67, 88]\n\nmarks.sort()\n\nhighest = max(marks)\nlowest = min(marks)\n\naverage = sum(marks) / len(marks)\n\n\nresult = {\n    \"highest\": highest,\n    \"lowest\": lowest,\n    \"average\": average\n}\n\nprint(\"Sorted Marks:\", marks)\nprint(\"Highest Marks:\", highest)\nprint(\"Lowest Marks:\", lowest)\nprint(\"Average Marks:\", average)\nprint(\"Tuple:\", tuple)\nprint(\"Dictionary:\", result)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Sorted Marks: [67, 78, 85, 88, 92]\nHighest Marks: 92\nLowest Marks: 67\nAverage Marks: 82.0\nTuple: [78, 85, 92, 67, 88]\nDictionary: {'highest': 92, 'lowest': 67, 'average': 82.0}\n"
+        }
+      ],
+      "execution_count": 10
+    },
+    {
+      "id": "026aff54-e2b7-42c6-bf70-ff321d7a8790",
+      "cell_type": "code",
+      "source": "a = [10, 20, 10, 30, 20, 10, 40, 30]\ntuple = [10, 20, 10, 30, 20, 10, 40, 30]\n\nfreq = {}\n\nfor x in a:\n    if x in freq:\n        freq[x] += 1\n    else:\n        freq[x] = 1\n\n\nprint(\"List:\", a)\nprint(\"Tuple:\", tuple)\nprint(\"Frequency Dictionary:\", freq)\nfreq = {}\n\nfor x in a:\n    if x in freq:\n        freq[x] += 1\n    else:\n        freq[x] = 1\n\n\nprint(\"List:\", a)\nprint(\"Tuple:\", tuple)\nprint(\"Frequency Dictionary:\", freq)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "List: [10, 20, 10, 30, 20, 10, 40, 30]\nTuple: [10, 20, 10, 30, 20, 10, 40, 30]\nFrequency Dictionary: {10: 3, 20: 2, 30: 2, 40: 1}\nList: [10, 20, 10, 30, 20, 10, 40, 30]\nTuple: [10, 20, 10, 30, 20, 10, 40, 30]\nFrequency Dictionary: {10: 3, 20: 2, 30: 2, 40: 1}\n"
+        }
+      ],
+      "execution_count": 9
+    },
+    {
+      "id": "b1f23b75-0bce-4a1a-a82f-5e5865e9d26c",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
